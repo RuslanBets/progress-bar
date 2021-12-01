@@ -1,0 +1,49 @@
+.progress-bar {
+  position: relative;
+  width: 400px;
+  height: 30px;
+  border: 1px solid black;
+  margin: auto;
+  margin-top: 300px;
+  padding: 4px;
+  border-radius: 5px
+}
+
+.progress-bar .percentage {
+  height: 100%;
+  width: 50%;
+  background-color: rebeccapurple;
+  position: relative;
+  border-radius: 2px;
+  transition: .4s;
+}
+
+
+.percentage::after {
+  content: "";
+  position: absolute;
+  top: -15px;
+  right: -6px;
+  border: 8px solid transparent;
+  border-top: 15px solid orange;
+  display: block;
+  box-sizing: border-box;
+}
+
+.percentage::before {
+  content: attr(data-value);
+  color: rebeccapurple;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  line-height: 30px;
+  position: absolute;
+  right: -35px;
+  top: -45px;
+  width: 70px;
+  height: 30px;
+  background-color: orange;
+  display: block;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
